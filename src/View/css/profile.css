@@ -1,0 +1,113 @@
+
+div.profile {
+    text-align: center;
+    min-width:760px;
+    padding: 3px;
+}
+
+div.profile h2 {
+    color: #990000;
+    text-decoration: none;
+    font-size: 30pt;
+    border-bottom: 1px double #990000;
+}
+
+div.profile #right {
+    float: right;
+}
+
+div.profile #center {
+    text-align : center;
+    float: center;
+    margin: 0 auto;
+}
+
+div.navbar #left {
+    float: left;
+}
+
+div.navbar #right,#left {
+    display: inline-block;
+    height: 30px;
+}
+
+div.profile ul {
+    padding: 0;
+    margin: 0;
+    margin-left: 0px;
+}
+
+div.profile li {
+    display: inline-block;
+    border: none;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+}
+
+div.profile li a {
+    display: block;
+    padding: 0px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+div.profile li a:HOVER {
+    background: #55d400;
+    background: -moz-linear-gradient(top, #cc0000 0%, #990000 100%);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cc0000),to(#990000));
+}
+
+div.box {
+}
+
+div.profile tr {
+    background: #cccccc;	
+    text-align: left;
+    text-decoration: none;
+    font-size: 14pt;
+}
+
+div.profile td {
+    background: #f0eaea;
+    text-align: right;
+}
+div.evaluate{
+    background:#ffffff;
+    font-size: 5pt;
+    text-decoration: none;
+}
+
+.impult{
+    border:1px solid #006;
+   
+}
+.button {
+    border: 1px solid #006;
+    
+}
+label {
+    display: block;
+     width: 150px;
+     float: right;
+   /*  margin: 2px 4px 5px 4px;*/
+     text-align: left;    
+}
+
+botaoComoChegar{
+    position: absolute;
+    margin-left: 250px;
+    min-width: 760px;
+    background-color: #2b2b2b;
+    min-height: 200px;
+    
+}
+a.linkBranco{
+    color:#FFFFFF;
+}
+a.linkPreto{
+    color:#000000;
+}
+#pagination{
+    text-align : center;
+}
