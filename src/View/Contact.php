@@ -19,7 +19,7 @@
     </style>
 
     <body align="center">
-        <div class="root">                   
+        <div class="root">
             <?php
             require '../View/Shared/Header.php';
             require '../View/Shared/Navigation_bar.php';
@@ -30,7 +30,7 @@
                 $email = $_REQUEST['email'];
                 $suggestionController = ControllerSuggestion::getInstanceControllerSuggestion();
                 $result = $suggestionController->saveSuggestion($suggestion, $email);
-                if($result){
+                if ($result) {
                     print "<script>alert('Sua sugestão foi gravada com sucesso! "
                     . "Obrigado por nos ajudar a melhorar o site.')</script>";
                 }
@@ -38,16 +38,16 @@
             ?>
             <h2>Deixe sua opinião</h2>
             <form action="Contact.php" method="post">
-                <textarea name="sugestao" cols="91" rows="10" value="sugestao" maxlenght="1000" 
+                <textarea name="sugestao" cols="91" rows="10" value="sugestao" maxlenght="1000"
                           placeholder="Digite sua sugestão aqui..."></textarea>
                 <input type="submit" name="enviarSugestao" value="Enviar">
-                <input type="email" name="email" style="width: 300px; height: 24px" 
+                <input type="email" name="email" style="width: 300px; height: 24px"
                        placeholder="Digite seu e-mail aqui..."/>
             </form>
 
             <div align ="center">
                 <div class="content">
-                    <table border = "1">                    
+                    <table border = "1">
                         <b><font size="6">Equipe de Desenvolvimento</font></b>
                         <table width="760"border="1">
                             <tr>
