@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/home.css" type="text/css">
         <link rel="stylesheet" href="css/profile.css" type="text/css">
         <link href="/../Shared/css/jquery-ui-1.10.3.custom.css" rel="stylesheet">
-        <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" 
+        <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css"
               rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="../View/Shared/js/jquery.price_format.1.8.min.js"></script>
         <script type="text/javascript" src="../View/Shared/js/location.js"></script>
@@ -17,7 +17,7 @@
     </head>
 
     <body>
-        <div class="root">  
+        <div class="root">
             <?php
             require_once '/../Controller/ControllerProfileUBS.php';
             require_once '/../Controller/ControllerStatistics.php';
@@ -38,9 +38,9 @@
 
             $controllerRanking = ControllerRanking::getInstanceControllerRanking();
             $starImg = $controllerRanking->getStarImage($profileUBS->getAverage());
-            ?>   
+            ?>
 
-            <div class="profile"> 
+            <div class="profile">
 
                 <h2 style="text-indent:30px;">
                     <?php echo $profileUBS->getNameUBS(); ?>
@@ -59,7 +59,7 @@
                         <tr>
                             <th>Estado:</th>
                             <td class="align-left"><?php
-                                echo $profileUBS->getCity()->getState()->getNameState() . " 
+                                echo $profileUBS->getCity()->getState()->getNameState() . "
                                     (" . $profileUBS->getCity()->getState()->getAcronym() . ")";
                                 ?></td>
                         </tr>
@@ -129,7 +129,7 @@
                                         </tr>
                                         <tr>
                                             <td class="align-left">
-                                                <input class="button" type="submit" name="submitEvaluate" 
+                                                <input class="button" type="submit" name="submitEvaluate"
                                                        value="Avaliar"/>
                                             </td>
                                         </tr>
@@ -142,8 +142,8 @@
                                     google.load('visualization', '1.0', {'packages': ['controls']});
                                     google.setOnLoadCallback(drawDashboard);
 
-                                    function drawDashboard() {
-
+                                    function drawDashboard()
+                                    {
                                         var data = google.visualization.arrayToDataTable([
                                             ['Nota', 'Percentual'],
                                             ['Ruim', <?php echo $evaluatesUBS[0]; ?>],
@@ -155,7 +155,6 @@
 
                                         var dashboard = new google.visualization.Dashboard(document.
                                                 getElementById('dashboard_div'));
-
 
                                         var donutRangeSlider = new google.visualization.ControlWrapper({
                                             'controlType': 'NumberRangeFilter',
@@ -226,7 +225,8 @@
 
                         }
 
-                        function calcRoute() {
+                        function calcRoute()
+                        {
                             var start = document.getElementById("endereco").value;
                             var end = document.getElementById("destino").value;
                             var request = {
@@ -235,7 +235,7 @@
                                 travelMode: google.maps.DirectionsTravelMode.DRIVING
                             };
 
-                            directionsService.route(request, function(response, status) {
+                            directionsService.route(request, function (response, status) {
                                 if (status === google.maps.DirectionsStatus.OK) {
                                     directionsDisplay.setDirections(response);
                                 } else {
@@ -258,13 +258,14 @@
                                 ?>
                                 <script>
                         navigator.geolocation.getCurrentPosition(showposUBS);
-                        function showposUBS(position) {
+                        function showposUBS(position)
+                        {
                             var lat = position.coords.latitude;
                             var lon = position.coords.longitude;
                             var latlon = lat + ',' + lon;
                             window.location = "Profile.php?id=<?php echo $idUBS ?>&latlon=" + latlon;
                         }
-                                </script> 
+                                </script>
                                 <?php
                             } else {
                                 $latlon2 = $_REQUEST['latlon'];
@@ -290,7 +291,7 @@
 
                     <br /><br />
                     <h2>Deixe sua Opinião</h2>
-                    <script>(function(d, s, id) {
+                    <script>(function (d, s, id) {
                             var js, fjs = d.getElementsByTagName(s)[0];
                             if (d.getElementById(id))
                                 return;
@@ -301,7 +302,7 @@
                         }(document, 'script', 'facebook-jssdk'));</script>
                     <div id="fb-root"></div>
                     <div class="fb-comments" data-href="http://cademeuhospital.url.ph/src/View/Profile.php?
-                         id=<?php echo $_REQUEST['id'] ?>" 
+                         id=<?php echo $_REQUEST['id'] ?>"
                          data-numposts="4" data-width="760"></div>
                 </div>
                 <?php require '../View/Shared/Footer.php'; ?>
