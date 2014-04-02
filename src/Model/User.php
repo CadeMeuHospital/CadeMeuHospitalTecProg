@@ -1,5 +1,9 @@
 <?php
 
+/*  File: User.php
+    Description: 
+*/
+
 class User
 {
     private $latitude;

@@ -1,5 +1,9 @@
 <?php
 
+/*  File: ProfileUBS.php
+    Description: 
+*/
+
 class ProfileUBS
 {
     private $idUBS;

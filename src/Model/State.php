@@ -1,5 +1,9 @@
 <?php
 
+/*  File: State.php
+    Description: 
+*/
+
 class State
 {
     private $acronym;

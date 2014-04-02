@@ -1,5 +1,9 @@
 <?php
 
+/*  File: City.php
+    Description: 
+*/
+
 class City
 {
     private $codMunic;
