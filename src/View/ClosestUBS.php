@@ -14,7 +14,7 @@ require_once '/../Controller/ControllerUser.php';
         <script type="text/javascript" src="../View/shared/js/jquery.price_format.1.8.min.js"></script>
         <script type="text/javascript" src="//j.maxmind.com/js/geoip.js"></script>
         <link href="/../Shared/css/jquery-ui-1.10.3.custom.css" rel="stylesheet">
-        <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" 
+        <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css"
               rel="stylesheet" type="text/css" />
 
         <?php
@@ -33,12 +33,12 @@ require_once '/../Controller/ControllerUser.php';
         } else {
             ?>
             <style>#mapview{display:none;}</style>
-            
+
         </head>
 
         <body>
 
-            <div class="root">  
+            <div class="root">
 
                 <?php
                 include_once '../View/Shared/Header.php';
@@ -49,9 +49,9 @@ require_once '/../Controller/ControllerUser.php';
                 $controllerProfileUBS = ControllerProfileUBS::getInstanceControllerProfileUBS();
                 $closestUBSs = $controllerProfileUBS->searchUBS($currentUser->getCity(), CIDADE);
                 $menor = 20000;
-                
+
                 $countUBS = count($closestUBSs);
-                
+
                 for ($i = 0; $i < $countUBS; $i++) {
                     $currentUBS = $closestUBSs[$i];
 
@@ -63,7 +63,7 @@ require_once '/../Controller/ControllerUser.php';
                         $closestUBS = $currentUBS;
                     }
                 }
-                ?>   
+                ?>
 
                 <script>
                     window.location = "Profile.php?id=<?php echo $closestUBS->getIdUBS(); ?>";
