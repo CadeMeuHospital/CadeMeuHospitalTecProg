@@ -1,41 +1,45 @@
 <?php
 
-
-class User {
-    
+class User
+{
     private $latitude;
     private $longitude;
     private $city;
-    
-    function __construct($latitude, $longitude, $city) {
+
+    public function __construct($latitude, $longitude, $city)
+    {
         $this->setLatitude($latitude);
         $this->setLongitude($longitude);
         $this->setCity($city);
     }
-    
-    public function getCity() {
+
+    public function getCity()
+    {
         return $this->city;
     }
-    public function setCity($city) {
+    public function setCity($city)
+    {
         $this->city = $city;
     }
 
-    public function getLatitude() {
+    public function getLatitude()
+    {
         return $this->latitude;
     }
 
-    public function setLatitude($latitude) {
+    public function setLatitude($latitude)
+    {
         $this->latitude = $latitude;
     }
 
-    public function getLongitude() {
+    public function getLongitude()
+    {
         return $this->longitude;
     }
 
-    public function setLongitude($longitude) {
+    public function setLongitude($longitude)
+    {
         $this->longitude = $longitude;
     }
 
 }
-
-?>
