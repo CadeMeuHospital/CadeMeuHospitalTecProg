@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>CMH - Perfil UBS</title>
-    </head>    
+    </head>
     <?php
         require_once '/../Controller/ControllerProfileUBS.php';
 
@@ -15,13 +15,13 @@
 
         $return = $controllerProfileUBS->evaluateUBS($evaluate, $idUBS);
 
-        if($return != FALSE){
+        if ($return != FALSE) {
             ?>
                 <script language="Javascript" type="text/javascript">
                     alert("Sua avaliação foi gravada com sucesso!!Obrigado!");
                 </script>
             <?php
-        }else{
+        } else {
             ?>
                 <script language="Javascript" type="text/javascript">
                     alert("Sua avaliação não foi gravada com sucesso!!desculpe-nos!");
@@ -33,4 +33,3 @@
             window.location="Profile.php?id=<?php echo $idUBS; ?>";
         </script>
 </html>
-
