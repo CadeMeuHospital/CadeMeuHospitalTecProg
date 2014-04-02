@@ -1,7 +1,7 @@
 <?php
 
-class State {
-
+class State
+{
     private $acronym;
     private $amount_ubs;
     private $avarage;
@@ -9,7 +9,8 @@ class State {
     private $population;
     private $area;
 
-    function __construct($acronym, $amount_ubs, $avarage, $nameState, $population, $area) {
+    public function __construct($acronym, $amount_ubs, $avarage, $nameState, $population, $area)
+    {
         $this->setAcronym($acronym);
         $this->setAmount_ubs($amount_ubs);
         $this->setAvarage($avarage);
@@ -18,54 +19,64 @@ class State {
         $this->setArea($area);
     }
 
-    public function getAcronym() {
+    public function getAcronym()
+    {
         return $this->acronym;
     }
 
-    public function setAcronym($acronym) {
+    public function setAcronym($acronym)
+    {
         $this->acronym = $acronym;
     }
 
-    public function getAmount_ubs() {
+    public function getAmount_ubs()
+    {
         return $this->amount_ubs;
     }
 
-    public function setAmount_ubs($amount_ubs) {
+    public function setAmount_ubs($amount_ubs)
+    {
         $this->amount_ubs = $amount_ubs;
     }
 
-    public function getAvarage() {
+    public function getAvarage()
+    {
         return $this->avarage;
     }
 
-    public function setAvarage($avarage) {
+    public function setAvarage($avarage)
+    {
         $this->avarage = $avarage;
     }
 
-    public function getNameState() {
+    public function getNameState()
+    {
         return $this->nameState;
     }
 
-    public function setNameState($nameState) {
+    public function setNameState($nameState)
+    {
         $this->nameState = $nameState;
     }
 
-    public function getPopulation() {
+    public function getPopulation()
+    {
         return $this->population;
     }
 
-    public function setPopulation($population) {
+    public function setPopulation($population)
+    {
         $this->population = $population;
     }
 
-    public function getArea() {
+    public function getArea()
+    {
         return $this->area;
     }
 
-    public function setArea($area) {
+    public function setArea($area)
+    {
         $this->area = $area;
     }
 
 }
-
-?>
