@@ -1,11 +1,11 @@
 <?php
 
-class DistanceLatLon {
-
+class DistanceLatLon
+{
     //Compute the distance between two Lat/Lon Pairs
     //Haversine_formula
-    public static function computeDistance($fromLat, $fromLon, $toLat, $toLon) {
-
+    public static function computeDistance($fromLat, $fromLon, $toLat, $toLon)
+    {
         // Ensure that all are floating pontt values
         $fromLat = floatval($fromLat);
         $fromLon = floatval($fromLon);
@@ -19,7 +19,7 @@ class DistanceLatLon {
 
         // Compute the distance with the haversine formula
         $distanceRad = acos(sin(deg2rad($fromLat)) * sin(deg2rad($toLat)) +
-                cos(deg2rad($fromLat)) * cos(deg2rad($toLat)) * 
+                cos(deg2rad($fromLat)) * cos(deg2rad($toLat)) *
                 cos(deg2rad($fromLon - $toLon)));
 
         $distanceDegree = rad2deg($distanceRad);
@@ -32,5 +32,3 @@ class DistanceLatLon {
         return round($kilometers, 2);
     }
 }
-
-?>  
