@@ -2,7 +2,7 @@
 <link rel="shortcut icon" href="Shared/img/favicon.ico">
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="../View/Shared/css/style.css" type="text/css">
         <link rel="stylesheet" href="css/home.css" type="text/css">
         <link href="/../Shared/css/jquery-ui-1.10.3.custom.css" rel="stylesheet">
@@ -36,16 +36,16 @@
                 } else {
                     $option = $_POST['option1'];
                 }
-                
-                switch($option){
+
+                switch ($option) {
                     case "population":
                         $populations = $statistics[3];
                         $optionToBeCrossed = array();
-                        
-                        for($i = 0; $i < 27;$i++){
+
+                        for ($i = 0; $i < 27;$i++) {
                             $result = $populations[$i]/$amountUBS[$i];
                             $resultFormat = round($result, 2);
-                           
+
                             array_push($optionToBeCrossed, $resultFormat);
                         }
                         $title = "Quantidade de Pessoas por UBS";
@@ -54,11 +54,11 @@
                         $optionToBeCrossed = $statistics[1];
                         $title = "Média das Avaliações das UBS do Estado";
                         break;
-                    case "area":    
+                    case "area":
                         $areas = $statistics[4];
                         $optionToBeCrossed = array();
-                        
-                        for($i = 0; $i < 27;$i++){
+
+                        for ($i = 0; $i < 27;$i++) {
                             $result = $areas[$i]/$amountUBS[$i];
                             $resultFormat = round($result, 2);
                             array_push($optionToBeCrossed, $resultFormat);
@@ -92,7 +92,7 @@
                         </td>
                     </tr>
                 </table>
-                <input class="button" type="submit" name="submitCross" style="width:200px" 
+                <input class="button" type="submit" name="submitCross" style="width:200px"
                        value="Cruzar Informações"/>
             </form>
             <div id="center">
@@ -102,8 +102,8 @@
                         google.load('visualization', '1.0', {'packages': ['controls']});
                         google.setOnLoadCallback(drawDashboard);
 
-                        function drawDashboard() {
-
+                        function drawDashboard()
+                        {
                             var data = google.visualization.arrayToDataTable([
                                 ['Nota', 'Percentual'],
                                 ['Ruim', <?php echo $arrayStatistics[0]; ?>],
@@ -143,7 +143,8 @@
                     <script>
 
                         google.load('visualization', '1', {packages: ['geochart']});
-                        function drawVisualization() {
+                        function drawVisualization()
+                        {
                             var data = new google.visualization.DataTable();
                             data.addRows(27);
 
@@ -151,14 +152,14 @@
                             data.addColumn('number', 'Quantidade de UBS');
                             data.addColumn('number', '<?php echo $title;?>');
 
-                            <?php 
-                            for ($i = 0; $i < 27; $i++){
+                            <?php
+                            for ($i = 0; $i < 27; $i++) {
                             ?>
-                                data.setValue(<?php echo $i; ?>, 0, 
+                                data.setValue(<?php echo $i; ?>, 0,
                                 '<?php echo $namesOfStates[$i]; ?>');
-                                data.setValue(<?php echo $i; ?>, 2, 
+                                data.setValue(<?php echo $i; ?>, 2,
                                 <?php echo $optionToBeCrossed[$i]; ?>);
-                                data.setValue(<?php echo $i; ?>, 1, 
+                                data.setValue(<?php echo $i; ?>, 1,
                                 <?php echo $amountUBS[$i]; ?>);
                             <?php
                             }
@@ -184,7 +185,7 @@
                     <h1>Concentração de UBS por estado no Brasil</h1>
                     <div id="visualization" style=" border-bottom: 1px double #990000; border-top: 1px double #990000;
                          border-left: 1px double #990000; border-right: 1px double #990000;">
-                    </div>            
+                    </div>
                     <!--Div that will hold the dashboard-->
                     <br>
                     <br>
