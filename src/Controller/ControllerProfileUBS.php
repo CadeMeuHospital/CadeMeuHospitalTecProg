@@ -8,24 +8,27 @@ require_once '/../Dao/StateDAO.php';
 require_once '/../Utils/DataValidation.php';
 require_once '/../Utils/DistanceLatLon.php';
 
-class ControllerProfileUBS {
-
+class ControllerProfileUBS
+{
     private static $instanceControllerProfileUBS;
 
-    private function __construct() {
-        
+    private function __construct()
+    {
     }
 
     //Singleton Pattern
-    public static function getInstanceControllerProfileUBS() {
+    public static function getInstanceControllerProfileUBS()
+    {
         if (!isset(self::$instanceControllerProfileUBS)) {
             self::$instanceControllerProfileUBS = new ControllerProfileUBS();
         }
+
         return self::$instanceControllerProfileUBS;
     }
 
     //Return one UBS with that id
-    public function returnUBS($idUBS) {
+    public function returnUBS($idUBS)
+    {
         $profileUBSDAO = ProfileUBSDAO::getInstanceProfileUBSDAO();
 
         $attributesUBS = $profileUBSDAO->returnUBS($idUBS);
@@ -35,11 +38,13 @@ class ControllerProfileUBS {
         }
 
         $profileUBS = self::$instanceControllerProfileUBS->makeObjectLoop($attributesUBS, 0);
+
         return $profileUBS;
     }
 
     //Evaluate one UBS
-    public function evaluateUBS($evaluate, $idUBS) {
+    public function evaluateUBS($evaluate, $idUBS)
+    {
         $profileUBSDAO = ProfileUBSDAO::getInstanceProfileUBSDAO();
         $controllerState = ControllerState::getInstanceControllerState();
         $ubs = self::$instanceControllerProfileUBS->returnUBS($idUBS);
@@ -49,17 +54,19 @@ class ControllerProfileUBS {
         $stateAcronym = $ubs->getCity()->getState()->getAcronym();
         $resultEvaluation = $profileUBSDAO->saveEvaluationUBS($evaluate, $idUBS);
         $controllerState->saveAverageEvaluationState($evaluate, $stateAcronym);
+
         return $resultEvaluation;
     }
 
     //get the distance between two latitude and longitude
-    public function getDistanceBetweenTwoLatLon($from_lat, $from_lon, $to_lat, $to_lon) {
+    public function getDistanceBetweenTwoLatLon($from_lat, $from_lon, $to_lat, $to_lon)
+    {
         return DistanceLatLon::computeDistance($from_lat, $from_lon, $to_lat, $to_lon);
     }
 
     //Making object in a loop
-    public function makeObjectLoop($attributeUBS, $index) {
-
+    public function makeObjectLoop($attributeUBS, $index)
+    {
         $idUBS = mysql_result($attributeUBS, $index, "cod_unico");
         $latitudeUBS = mysql_result($attributeUBS, $index, "vlr_latitude");
         $longitudeUBS = mysql_result($attributeUBS, $index, "vlr_longitude");
@@ -89,8 +96,8 @@ class ControllerProfileUBS {
     }
 
     //searching one UBS
-    public function searchUBS($field, $searchType) {
-
+    public function searchUBS($field, $searchType)
+    {
         $profileUBSDAO = ProfileUBSDAO::getInstanceProfileUBSDAO();
 
         $cont = 0;
@@ -110,9 +117,8 @@ class ControllerProfileUBS {
             print "<script>alert('" . $e->getMessage() . "')</script>";
             print "<script>window.location='../View/Home.php'</script>";
         }
+
         return $arrayUBS;
     }
 
 }
-
-?>
