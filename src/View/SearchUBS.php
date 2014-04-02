@@ -7,15 +7,15 @@
         <link rel="stylesheet" href="css/home.css" type="text/css">
         <script type="text/javascript" src="../View/Shared/js/jquery.price_format.1.8.min.js"></script>
         <link href="/../Shared/css/jquery-ui-1.10.3.custom.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/profile.css" type="text/css">        
+        <link rel="stylesheet" href="css/profile.css" type="text/css">
         <style>
             #first-tr{
                 background-color:#B22222;
                 text-align:center;
-            } 
+            }
             #first-tr2{
                 background-color:#FFFFFF;
-                text-align:center;   
+                text-align:center;
 
             }
         </style>
@@ -46,14 +46,13 @@
                     <?php
                     $quantityUBS = count($arrayUBS);
                     echo "<br><p align = 'center'>Sua pesquisa retornou " . $quantityUBS . " resultados.</p><br><br>";
-                    
+
                     $controllerRanking = ControllerRanking::getInstanceControllerRanking();
                     $quantityPage = ceil($quantityUBS / 10);
                     $currentPage = $_GET['page'];
                     $page = $currentPage * 10;
 
                     for ($i = ($page - 10); $i < $page; $i++) {
-
 
                         if (isset($arrayUBS[$i])) {
                             $nameUBS = $arrayUBS[$i]->getNameUBS();
@@ -63,7 +62,7 @@
 
                             $path = "../View/Profile.php?id=" . $idUBS . "";
                             if ($i % 2 == 0) {
-                                echo "<tr id='first-tr'><td><a href=" . $path . " class = 
+                                echo "<tr id='first-tr'><td><a href=" . $path . " class =
                                     'linkBranco'> " . $nameUBS . " </a></td>";
                                 echo "<td class = 'linkBranco'><font color = 'white'>" .
                                 $cityUBS . "-" . $stateUBS . "</font></td>";
@@ -131,11 +130,10 @@
                             echo "<a href=" . $pathPage . "> " . ($i + 1) . " </a>";
                         }
                     }
-                } else if($quantityUBS != 0){
+                } elseif ($quantityUBS != 0) {
                     for ($i = 1; $i < $currentPage + 6; $i++) {
                         $pathPage = "SearchUBS.php?page=" .
                                 ($i) . "&BuscaUBS=" . $buscaUBSEncode . "&searchType=" . $value . "";
-
 
                         if ($i == $quantityPage) {
                             if ($currentPage == $i) {
