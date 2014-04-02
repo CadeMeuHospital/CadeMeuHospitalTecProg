@@ -5,33 +5,37 @@ require_once '/../Utils/Exception/EmailException.php';
 
 define('SIZECODMUNIC', 6);
 
-class DataValidation {
-
-    public static function throwTextFieldException($textField) {
-
+class DataValidation
+{
+    public static function throwTextFieldException($textField)
+    {
         $result = FALSE;
 
         if (self::validateNullFields($textField)) {
             throw new TextFieldException("Campo não pode ser nulo!");
-        } else if (self::validateTextField($textField) == 1) {
+        } elseif (self::validateTextField($textField) == 1) {
             throw new TextFieldException("Campo contém caracteres invalidos!");
-        } else if (self::validateTextFieldLessThan2Characters($textField)) {
+        } elseif (self::validateTextFieldLessThan2Characters($textField)) {
             throw new TextFieldException("Campo não pode ter menos de dois caracteres!");
         } else {
             $result = TRUE;
         }
+
         return $result;
     }
 
-    public static function validateTextFieldLessThan2Characters($textField) {
+    public static function validateTextFieldLessThan2Characters($textField)
+    {
         $textFieldLenght = strlen($textField);
         if ($textFieldLenght < 2) {
             return TRUE;
         }
+
         return FALSE;
     }
 
-    public function validateEmail($email) {
+    public function validateEmail($email)
+    {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             throw new EmailException("E-mail inválido!");
         } else {
@@ -39,12 +43,15 @@ class DataValidation {
         }
     }
 
-    public static function validateNullFields($parameter) {
+    public static function validateNullFields($parameter)
+    {
         $result = empty($parameter);
+
         return $result;
     }
 
-    public static function validateTextField($name) {
+    public static function validateTextField($name)
+    {
         $result = 0;
         $validChars = '. abcdefghijklmnopqrstuvwxyzçãõáíóúàòìù0123456789';
 
@@ -56,9 +63,8 @@ class DataValidation {
                 $result = 1;
             }
         }
+
         return $result;
     }
 
 }
-
-?>
