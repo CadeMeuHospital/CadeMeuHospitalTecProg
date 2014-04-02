@@ -1,5 +1,9 @@
 <?php
 
+/*  File: DistanceLatLon.php
+    Description: 
+*/
+
 class DistanceLatLon
 {
     //Compute the distance between two Lat/Lon Pairs

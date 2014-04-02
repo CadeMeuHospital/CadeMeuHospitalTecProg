@@ -1,5 +1,9 @@
 <?php
 
+/*  File: DataBaseConnection.php
+    Description: 
+*/
+
 $server = "localhost";
 $username = "root";
 $password = "";
