@@ -1,7 +1,9 @@
 <?php
 
-class EmailException extends Exception{
-    function __construct($message) {
+class EmailException extends Exception
+{
+    public function __construct($message)
+    {
         parent::__construct($message);
     }
 }
