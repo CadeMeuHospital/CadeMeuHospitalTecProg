@@ -1,5 +1,9 @@
 <?php
 
+/*  File: ControllerSuggestion.php
+    Description: 
+*/
+
 require_once '/../Dao/SuggestionDAO.php';
 
 class ControllerSuggestion
