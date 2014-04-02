@@ -1,5 +1,9 @@
 <?php
 
+/*  File: RankingDAO.php
+    Description: 
+*/
+
 require_once '/../Utils/DataBaseConnection.php';
 
 class RankingDAO

@@ -1,5 +1,9 @@
 <?php
 
+/*  File: StatisticsDAO.php
+    Description: 
+*/
+
 require_once '/../Utils/DataBaseConnection.php';
 
 class StatisticsDAO

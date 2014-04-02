@@ -1,5 +1,9 @@
 <?php
 
+/*  File: StateDAO.php
+    Description: 
+*/
+
 require_once '/../Utils/DataBaseConnection.php';
 
 class StateDAO
