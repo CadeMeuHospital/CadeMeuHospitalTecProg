@@ -1,7 +1,7 @@
 <?php
 
 /*  File: SuggestionDAO.php
-    Description: 
+    Description: This class gets the data from the database and makes a object with the information.
 */
 
 require_once '/../Utils/DataBaseConnection.php';

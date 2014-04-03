@@ -1,7 +1,7 @@
 <?php
 
 /*  File: StateDAO.php
-    Description: 
+    Description: This class takse the data from the database and sends the information to ControllerState.php.
 */
 
 require_once '/../Utils/DataBaseConnection.php';

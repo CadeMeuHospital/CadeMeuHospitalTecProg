@@ -1,7 +1,7 @@
 <?php
 
 /*  File: StatisticsDAO.php
-    Description: 
+    Description: This class gets the data from the database and sends the informations to ControllerStatistics.php
 */
 
 require_once '/../Utils/DataBaseConnection.php';

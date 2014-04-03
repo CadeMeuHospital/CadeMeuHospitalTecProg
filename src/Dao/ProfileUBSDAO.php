@@ -1,7 +1,7 @@
 <?php
 
 /*  File: ProfileUBSDAO.php
-    Description: 
+    Description: This class takes the data from the database and sends the information to ControllerProfileUBS.php
 */
 
 require_once '/../Utils/DataBaseConnection.php';

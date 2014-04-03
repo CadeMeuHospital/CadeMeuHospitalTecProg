@@ -1,7 +1,7 @@
 <?php
 
 /*  File: CityDAO.php
-    Description: 
+    Description: This class gets the data from the database and makes an object with the information.
 */
 
 require_once '/../Utils/DataBaseConnection.php';
