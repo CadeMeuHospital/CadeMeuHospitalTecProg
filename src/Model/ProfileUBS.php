@@ -1,7 +1,7 @@
 <?php
 
 /*  File: ProfileUBS.php
-    Description: 
+    Description: This class is responsible for getting the UBS's attributes.
 */
 
 class ProfileUBS

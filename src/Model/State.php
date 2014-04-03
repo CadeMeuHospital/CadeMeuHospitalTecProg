@@ -1,7 +1,7 @@
 <?php
 
 /*  File: State.php
-    Description: 
+    Description: This class is responsible for getting all the information from the states (population, area, name, number of ubs, acronysm)
 */
 
 class State

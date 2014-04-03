@@ -1,7 +1,7 @@
 <?php
 
 /*  File: User.php
-    Description: 
+    Description: This class is responsible for getting the latitude and longitude.
 */
 
 class User
