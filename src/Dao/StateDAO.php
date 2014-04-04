@@ -14,6 +14,7 @@ class StateDAO
     {
     }
 
+    //Singleton
     public static function getInstanceStateDAO()
     {
         if (!isset(self::$instanceStateDAO)) {
@@ -23,6 +24,7 @@ class StateDAO
         return self::$instanceStateDAO;
     }
 
+    //Saving The average Evaluation from a State
     public function saveAverageEvaluationStateDAO($evaluate, $stateAcronym)
     {
         $sqlAvgCount = "SELECT SUM(ubs.average) AS average,
@@ -48,6 +50,7 @@ class StateDAO
         return $result;
     }
 
+    //Getting a determined city's state from DB
     public function takeUfStateUBS($codMunic)
     {
         $sql = "SELECT uf FROM municipios_ibge WHERE codigo LIKE '" . $codMunic . "'";
@@ -57,6 +60,7 @@ class StateDAO
         return $state;
     }
 
+    //Getting all states from DB
     public function takeStateUBSOO($codMunic)
     {
         $ufState = $this->takeUfStateUBS($codMunic);
