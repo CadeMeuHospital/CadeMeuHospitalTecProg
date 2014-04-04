@@ -33,6 +33,7 @@ class ControllerRanking
         return $rank;
     }
 
+    //Creating a different image based on the UBS's average grade
     public function getStarImage($average)
     {
         if ($average == 0) {
