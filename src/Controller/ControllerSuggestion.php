@@ -24,6 +24,7 @@ class ControllerSuggestion
         return self::$instanceControllerSuggestion;
     }
 
+    //Saves User suggestion on BD
     public function saveSuggestion($suggestion, $email)
     {
         $suggestionDAO = SuggestionDAO::getInstanceSuggestionDAO();
