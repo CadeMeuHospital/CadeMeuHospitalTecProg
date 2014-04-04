@@ -1,7 +1,7 @@
 <?php
 
 /*  File: ControllerProfileUBS.php
-    Description: 
+    Description: Receives the information from ProfileUBSDao.php and makes an object with the information. 
 */
 
 require_once 'ControllerState.php';

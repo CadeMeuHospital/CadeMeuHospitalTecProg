@@ -1,7 +1,7 @@
 <?php
 
 /*  File: ControllerRanking.php
-    Description: 
+    Description: Receives the information from RankingDao.php and makes an object with the information.
 */
 
 require_once '/../Dao/RankingDAO.php';

@@ -1,7 +1,7 @@
 <?php
 
 /*  File: ControllerSuggestion.php
-    Description: 
+    Description: Receives the information from SuggestionDao.php and makes an object with the information.
 */
 
 require_once '/../Dao/SuggestionDAO.php';

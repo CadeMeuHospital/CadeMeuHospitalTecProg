@@ -1,7 +1,7 @@
 <?php
 
 /*  File: DataBaseConnection.php
-    Description: 
+    Description: Connects to the database 
 */
 
 $server = "localhost";

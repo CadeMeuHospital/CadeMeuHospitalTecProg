@@ -1,7 +1,7 @@
 <?php
 
 /*  File:  ControllerState.php
-    Description: 
+    Description: Receives the information from StateDao.php and makes an object with the information.
 */
 
 require_once '/../Dao/StateDAO.php';

@@ -1,7 +1,7 @@
 <?php
 
 /*  File: ControllerCity.php
-    Description: Receive the informations from CityDao.php and makes an object with the information.
+    Description: Receives the information from CityDao.php and makes an object with the information.
 */
     
 require_once '/../Dao/CityDAO.php';

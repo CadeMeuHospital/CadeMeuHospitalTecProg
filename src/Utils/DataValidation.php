@@ -1,7 +1,7 @@
 <?php
 
 /*  File: DataValidation.php
-    Description: 
+    Description: Class responsible for all the validation on the text fields.
 */
 
 require_once '/../Utils/Exception/TextFieldException.php';

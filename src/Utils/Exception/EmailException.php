@@ -1,7 +1,7 @@
 <?php
 
 /*  File: EmailException.php
-    Description: 
+    Description: Email Exception Constructor
 */
 
 class EmailException extends Exception

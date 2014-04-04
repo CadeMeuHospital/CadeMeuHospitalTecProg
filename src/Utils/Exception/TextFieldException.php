@@ -1,7 +1,7 @@
 <?php
 
 /*  File: TextFieldException.php
-    Description: 
+    Description: TextField Expection Constructor
 */
 
 class TextFieldException extends Exception

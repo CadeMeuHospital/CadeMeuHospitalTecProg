@@ -1,7 +1,7 @@
 <?php
 
 /*  File: ControllerUser.php
-    Description: 
+    Description: Creates a map with user current location.
 */
 
 require_once '/../Model/User.php';

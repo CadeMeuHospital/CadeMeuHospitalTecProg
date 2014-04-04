@@ -1,7 +1,7 @@
 <?php
 
 /*  File: DistanceLatLon.php
-    Description: 
+    Description: Class responsible for finding the nearest UBS from user.
 */
 
 class DistanceLatLon

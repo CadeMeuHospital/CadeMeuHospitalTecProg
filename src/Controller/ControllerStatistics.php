@@ -1,7 +1,7 @@
 <?php
 
 /*  File: ControllerStatistics.php
-    Description: 
+    Description: Receives the information from StatisticsDao.php and makes an object with the information.
 */
 
 require_once '/../Dao/StatisticsDAO.php';
