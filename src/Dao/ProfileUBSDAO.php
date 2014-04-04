@@ -70,6 +70,7 @@ class ProfileUBSDAO
         return self::executeComandSQL($sql, $idUBS);
     }
 
+    //getting UBS's average grade after voting
     public function executeComandSQL($sql, $idUBS)
     {
         mysql_query($sql);
@@ -78,6 +79,7 @@ class ProfileUBSDAO
         return $evaluateAverage;
     }
 
+    //updating UBS's average grade
     public function updateEvaluateAverage($idUBS)
     {
         $sql = "SELECT * FROM evaluate WHERE id_cod_unico
@@ -98,6 +100,7 @@ class ProfileUBSDAO
         return $evaluateAverage;
     }
 
+    //getting UBS's average grade
     public function takeAverageUBS($idUBS)
     {
         $sql = "SELECT (average) FROM ubs WHERE cod_unico
@@ -108,6 +111,7 @@ class ProfileUBSDAO
         return $average;
     }
 
+    //Searching determined UBS in DB
     public function searchUBSinDatabase($field, $searchType)
     {
         $field = trim($field);
