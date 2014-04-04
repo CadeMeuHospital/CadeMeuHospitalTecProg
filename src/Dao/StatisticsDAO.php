@@ -10,6 +10,7 @@ class StatisticsDAO
 {
     private static $instanceStatisticsDAO;
 
+    //Singleton
     public static function getInstanceStatisticsDAO()
     {
         if (!isset(self::$instanceStatisticsDAO)) {
@@ -19,6 +20,7 @@ class StatisticsDAO
         return self::$instanceStatisticsDAO;
     }
 
+    //Getting the sum of all grades from all UBS to apply on the chart
     public function getValuesToChartAverageEvaluate()
     {
         $query = "SELECT SUM(amount_people_1),SUM(amount_people_2),
@@ -30,6 +32,7 @@ class StatisticsDAO
         return $sum;
     }
 
+    //Getting the sum of all grade from a determined UBS
     public function getValuesToChartAverageEvaluateSingleUBS($idUBS)
     {
         $query = "SELECT amount_people_1,amount_people_2,amount_people_3,
@@ -41,6 +44,7 @@ class StatisticsDAO
         return $chartValue;
     }
 
+    //Getting all Statistics of the states from DB
     public function getStatisticsByState()
     {
         $statistics = array();
