@@ -11,6 +11,7 @@ define('SIZECODMUNIC', 6);
 
 class DataValidation
 {
+    //Cheking if text field camp is null or less than 2 characters
     public static function throwTextFieldException($textField)
     {
         $result = FALSE;
@@ -28,6 +29,7 @@ class DataValidation
         return $result;
     }
 
+    //Checking if text field is less than 2 characters
     public static function validateTextFieldLessThan2Characters($textField)
     {
         $textFieldLenght = strlen($textField);
@@ -38,6 +40,7 @@ class DataValidation
         return FALSE;
     }
 
+    //Checking if the email is valid
     public function validateEmail($email)
     {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -47,6 +50,7 @@ class DataValidation
         }
     }
 
+    //Checking if field is empty
     public static function validateNullFields($parameter)
     {
         $result = empty($parameter);
@@ -54,6 +58,7 @@ class DataValidation
         return $result;
     }
 
+    //Checking if text field use only valid characters
     public static function validateTextField($name)
     {
         $result = 0;
