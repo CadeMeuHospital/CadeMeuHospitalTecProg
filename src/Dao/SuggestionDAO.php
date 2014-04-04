@@ -25,6 +25,7 @@ class SuggestionDAO
         return self::$instanceSuggestionDAO;
     }
 
+    //Saving a Suggestion from the user in DB
     public function saveSuggestionInDatabase($suggestion, $email)
     {
         DataValidation::throwTextFieldException($suggestion);
