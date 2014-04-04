@@ -14,6 +14,7 @@ class RankingDAO
     {
     }
 
+    //Singleton
     public static function getInstanceRankingDAO()
     {
         if (!isset(self::$instanceRankingDAO)) {
@@ -23,6 +24,7 @@ class RankingDAO
         return self::$instanceRankingDAO;
     }
 
+    //Getting the TOP 5 UBS based on their average grade
     public function getRank()
     {
         $sql = "SELECT nom_estab,cod_unico,average FROM ubs INNER JOIN evaluate
