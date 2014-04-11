@@ -3,7 +3,6 @@
 /*  File: City.php
     Description: This class is responsible for getting the list of Cities and States.
 */
-*/
 
 class City
 {
