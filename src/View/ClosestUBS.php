@@ -48,7 +48,7 @@ require_once '/../Controller/ControllerUser.php';
                 $currentUser = $controllerUser->makeObjectUser($_REQUEST['lat'], $_REQUEST['lon']);
                 $controllerProfileUBS = ControllerProfileUBS::getInstanceControllerProfileUBS();
                 $closestUBSs = $controllerProfileUBS->searchUBS($currentUser->getCity(), CIDADE);
-                $menor = 20000;
+                $less = 20000;
 
                 $countUBS = count($closestUBSs);
 
@@ -58,8 +58,8 @@ require_once '/../Controller/ControllerUser.php';
                     $distance = $controllerProfileUBS->getDistanceBetweenTwoLatLon($currentUser->getLatitude(),
                             $currentUser->getLongitude(),$currentUBS->getLatitudeUBS(),$currentUBS->getLongitudeUBS());
 
-                    if ($distance < $menor) {
-                        $menor = $distance;
+                    if ($distance < $less) {
+                        $less = $distance;
                         $closestUBS = $currentUBS;
                     }
                 }
