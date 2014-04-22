@@ -95,14 +95,14 @@
             <br>
             <div id="pagination">
                 <?php
-                $buscaUBSEncode = urlencode($searchUBS);
-                $firstPage = "SearchUBS.php?page=1&BuscaUBS=" . $buscaUBSEncode . "&searchType=" . $value . "";
+                $searchUBSEncode = urlencode($searchUBS);
+                $firstPage = "SearchUBS.php?page=1&BuscaUBS=" . $searchUBSEncode . "&searchType=" . $value . "";
                 $lastPage = "SearchUBS.php?page=" .
-                        $quantityPage . "&BuscaUBS=" . $buscaUBSEncode . "&searchType=" . $value . "";
+                        $quantityPage . "&BuscaUBS=" . $searchUBSEncode . "&searchType=" . $value . "";
                 $nextPage = "SearchUBS.php?page=" .
-                        ($currentPage + 1) . "&BuscaUBS=" . $buscaUBSEncode . "&searchType=" . $value . "";
+                        ($currentPage + 1) . "&BuscaUBS=" . $searchUBSEncode . "&searchType=" . $value . "";
                 $prevPage = "SearchUBS.php?page=" .
-                        ($currentPage - 1) . "&BuscaUBS=" . $buscaUBSEncode . "&searchType=" . $value . "";
+                        ($currentPage - 1) . "&BuscaUBS=" . $searchUBSEncode . "&searchType=" . $value . "";
                 if ($currentPage > 1 && $quantityUBS != 0) {
                     echo "<a href=" . $firstPage . ">  [<<]  </a>";
                     echo "<a href=" . $prevPage . ">  [<]  </a>";
@@ -112,7 +112,7 @@
 
                     for ($i = $currentPage - 6; $i < $currentPage + 5; $i++) {
                         $pathPage = "SearchUBS.php?page=" . ($i + 1) .
-                                "&BuscaUBS=" . $buscaUBSEncode . "&searchType=" . $value . "";
+                                "&BuscaUBS=" . $searchUBSEncode . "&searchType=" . $value . "";
 
                         if ($i == $quantityPage - 1) {
                             if ($currentPage == $i + 1) {
@@ -133,7 +133,7 @@
                 } elseif ($quantityUBS != 0) {
                     for ($i = 1; $i < $currentPage + 6; $i++) {
                         $pathPage = "SearchUBS.php?page=" .
-                                ($i) . "&BuscaUBS=" . $buscaUBSEncode . "&searchType=" . $value . "";
+                                ($i) . "&BuscaUBS=" . $searchUBSEncode . "&searchType=" . $value . "";
 
                         if ($i == $quantityPage) {
                             if ($currentPage == $i) {
