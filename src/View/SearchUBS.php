@@ -33,13 +33,13 @@
 
                 <?php
                 $value = $_REQUEST['searchType'];
-                $buscaUBS = $_REQUEST['BuscaUBS'];
+                $searchUBS = $_REQUEST['BuscaUBS'];
 
                 require_once '/../Controller/ControllerProfileUBS.php';
                 require_once '/../Controller/ControllerRanking.php';
 
                 $controllerProfileUBS = ControllerProfileUBS::getInstanceControllerProfileUBS();
-                $arrayUBS = $controllerProfileUBS->searchUBS($buscaUBS, $value);
+                $arrayUBS = $controllerProfileUBS->searchUBS($searchUBS, $value);
                 ?>
 
                 <table style="min-width:760px;">
@@ -95,7 +95,7 @@
             <br>
             <div id="pagination">
                 <?php
-                $buscaUBSEncode = urlencode($buscaUBS);
+                $buscaUBSEncode = urlencode($searchUBS);
                 $firstPage = "SearchUBS.php?page=1&BuscaUBS=" . $buscaUBSEncode . "&searchType=" . $value . "";
                 $lastPage = "SearchUBS.php?page=" .
                         $quantityPage . "&BuscaUBS=" . $buscaUBSEncode . "&searchType=" . $value . "";
