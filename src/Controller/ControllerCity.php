@@ -21,6 +21,9 @@ class ControllerCity
         if (!isset(self::$instanceControllerCity)) {
             self::$instanceControllerCity = new ControllerCity();
         }
+        else {
+            //Nothing to do
+        }
 
         return self::$instanceControllerCity;
     }
