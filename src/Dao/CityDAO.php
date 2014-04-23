@@ -25,10 +25,10 @@ class CityDAO
     }
 
     //Taking a ciy in Data Base
-    public function takeCityDatabase($codMunic)
+    public function takeCityDatabase($codeCounty)
     {
         $querySelCity = "SELECT (municipio) FROM municipios_ibge
-            WHERE codigo = '".$codMunic."'";
+            WHERE codigo = '".$codeCounty."'";
         $selCity = mysql_query($querySelCity);
         $resultCity = mysql_fetch_row($selCity);
 

@@ -34,20 +34,20 @@ class ControllerState
     }
 
     //Taking a State
-    public function takeState($codMunic)
+    public function takeState($codeCounty)
     {
         $stateDAO = StateDAO::getInstanceStateDAO();
-        $stateAcronym = $stateDAO->takeUfStateUBS($codMunic);
+        $stateAcronym = $stateDAO->takeUfStateUBS($codeCounty);
 
         return $stateAcronym;
     }
 
     //Making a State Object
-    public function makeObjectState($codMunic)
+    public function makeObjectState($codeCounty)
     {
         $stateDAO = StateDAO::getInstanceStateDAO();
 
-        $attributeState = $stateDAO->takeStateUBSOO($codMunic);
+        $attributeState = $stateDAO->takeStateUBSOO($codeCounty);
 
         $acronym = $attributeState[1];
         $amountUBS = $attributeState[2];

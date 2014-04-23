@@ -84,13 +84,13 @@ class ControllerProfileUBS
         $descMedicine = mysql_result($attributeUBS, $index, "dsc_medicamentos");
         $average = mysql_result($attributeUBS, $index, "average");
 
-        $codMunic = mysql_result($attributeUBS, $index, "cod_munic");
+        $codeCounty = mysql_result($attributeUBS, $index, "cod_munic");
 
         $controllerState = ControllerState::getInstanceControllerState();
-        $stateUBS = $controllerState->makeObjectState($codMunic);
+        $stateUBS = $controllerState->makeObjectState($codeCounty);
 
         $controllerCity = ControllerCity::getInstanceControllerCity();
-        $cityUBS = $controllerCity->makeObjectCity($codMunic, $stateUBS);
+        $cityUBS = $controllerCity->makeObjectCity($codeCounty, $stateUBS);
 
         $ubs = new ProfileUBS($idUBS, $latitudeUBS, $longitudeUBS, $codCNES,
                 $nameUBS, $dscEnder, $phoneUBS, $physicStructureUBS,

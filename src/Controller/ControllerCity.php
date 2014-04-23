@@ -29,14 +29,14 @@ class ControllerCity
     }
 
     //Making a City Object
-    public function makeObjectCity($codMunic, $state)
+    public function makeObjectCity($codeCounty, $state)
     {
         $cityDao = CityDAO::getInstanceCityDAO();
-        $attributeCity = $cityDao->takeCityDatabase($codMunic);
+        $attributeCity = $cityDao->takeCityDatabase($codeCounty);
 
         $nameCity = $attributeCity[0];
 
-        $city = new City($codMunic, $nameCity, $state);
+        $city = new City($codeCounty, $nameCity, $state);
 
         return $city;
     }

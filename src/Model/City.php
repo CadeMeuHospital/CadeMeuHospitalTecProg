@@ -6,14 +6,14 @@
 
 class City
 {
-    private $codMunic;
+    private $codeCounty;
     private $dscCidade;
 
     private $state;
 
-    public function __construct($codMunic, $dscCidade, $state)
+    public function __construct($codeCounty, $dscCidade, $state)
     {
-        $this->setCodMunic($codMunic);
+        $this->setCodMunic($codeCounty);
         $this->setDscCidade($dscCidade);
 
         $this->setState($state);
@@ -31,12 +31,12 @@ class City
 
     public function getCodMunic()
     {
-        return $this->codMunic;
+        return $this->codeCounty;
     }
 
-    public function setCodMunic($codMunic)
+    public function setCodMunic($codeCounty)
     {
-        $this->codMunic = $codMunic;
+        $this->codeCounty = $codeCounty;
     }
 
     public function getDscCidade()
