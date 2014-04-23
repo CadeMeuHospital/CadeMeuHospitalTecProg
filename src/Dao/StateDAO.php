@@ -20,6 +20,10 @@ class StateDAO
         if (!isset(self::$instanceStateDAO)) {
             self::$instanceStateDAO = new StateDAO();
         }
+        
+        else {
+            //Nothing to do
+        }
 
         return self::$instanceStateDAO;
     }
@@ -51,9 +55,9 @@ class StateDAO
     }
 
     //Getting a determined city's state from DB
-    public function takeUfStateUBS($codMunic)
+    public function takeUfStateUBS($codeCounty)
     {
-        $sql = "SELECT uf FROM municipios_ibge WHERE codigo LIKE '" . $codMunic . "'";
+        $sql = "SELECT uf FROM municipios_ibge WHERE codigo LIKE '" . $codeCounty . "'";
         $result = mysql_query($sql);
         $state = mysql_fetch_row($result);
 
@@ -61,9 +65,9 @@ class StateDAO
     }
 
     //Getting all states from DB
-    public function takeStateUBSOO($codMunic)
+    public function takeStateUBSOO($codeCounty)
     {
-        $ufState = $this->takeUfStateUBS($codMunic);
+        $ufState = $this->takeUfStateUBS($codeCounty);
 
         $sql = "SELECT * FROM state WHERE acronym LIKE '" . $ufState[0] . "'";
         $result = mysql_query($sql);
