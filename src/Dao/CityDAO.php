@@ -20,6 +20,10 @@ class CityDAO
         if (!isset(self::$instanceCityDAO)) {
             self::$instanceCityDAO = new CityDAO();
         }
+        
+        else {
+            //Nothing to do
+        }
 
         return self::$instanceCityDAO;
     }
