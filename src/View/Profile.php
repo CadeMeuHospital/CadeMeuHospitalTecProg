@@ -28,6 +28,10 @@
             if (!isset($_GET['id'])) {
                 header("location: ../index.php");
             }
+            
+            else {
+            //Nothing to do
+            }
 
             $idUBS = $_REQUEST['id'];
             $controllerProfileUBS = ControllerProfileUBS::getInstanceControllerProfileUBS();
