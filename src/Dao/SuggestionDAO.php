@@ -21,6 +21,10 @@ class SuggestionDAO
         if (!isset(self::$instanceSuggestionDAO)) {
             self::$instanceSuggestionDAO = new SuggestionDAO();
         }
+        
+        else {
+            //Nothing to do
+        }
 
         return self::$instanceSuggestionDAO;
     }
