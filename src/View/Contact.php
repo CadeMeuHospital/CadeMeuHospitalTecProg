@@ -34,6 +34,9 @@
                     print "<script>alert('Sua sugestão foi gravada com sucesso! "
                     . "Obrigado por nos ajudar a melhorar o site.')</script>";
                 }
+                else {
+                    //Nothing to do
+                }
             }
             ?>
             <h2>Deixe sua opinião</h2>
