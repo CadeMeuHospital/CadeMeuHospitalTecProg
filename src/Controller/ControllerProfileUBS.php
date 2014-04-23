@@ -104,18 +104,18 @@ class ControllerProfileUBS
     {
         $profileUBSDAO = ProfileUBSDAO::getInstanceProfileUBSDAO();
 
-        $cont = 0;
+        $counter = 0;
         $arrayUBS = array();
         try {
             $attributesUBS = $profileUBSDAO->searchUBSinDatabase($field, $searchType);
             $lines = mysql_num_rows($attributesUBS);
-            while ($cont < $lines) {
+            while ($counter < $lines) {
 
-                $UBS = self::$instanceControllerProfileUBS->makeObjectLoop($attributesUBS, $cont);
+                $UBS = self::$instanceControllerProfileUBS->makeObjectLoop($attributesUBS, $counter);
 
                 array_push($arrayUBS, $UBS);
 
-                $cont++;
+                $counter++;
             }
         } catch (TextFieldException $e) {
             print "<script>alert('" . $e->getMessage() . "')</script>";
