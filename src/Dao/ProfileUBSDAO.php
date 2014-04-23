@@ -25,6 +25,10 @@ class ProfileUBSDAO
         if (!isset(self::$instanceProfileUBSDAO)) {
             self::$instanceProfileUBSDAO = new ProfileUBSDAO();
         }
+        
+        else {
+            //Nothing to do
+        }
 
         return self::$instanceProfileUBSDAO;
     }
@@ -89,6 +93,10 @@ class ProfileUBSDAO
 
         if ($resultAverage == null) {
             return false;
+        }
+        
+        else {
+            //Nothing to do
         }
 
         $evaluateAverage = $resultAverage[3] / $resultAverage[2];
