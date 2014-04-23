@@ -62,6 +62,9 @@ require_once '/../Controller/ControllerUser.php';
                         $less = $distance;
                         $closestUBS = $currentUBS;
                     }
+                    else {
+                        //Nothing to do
+                    }
                 }
                 ?>
 
