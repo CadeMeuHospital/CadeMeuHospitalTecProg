@@ -36,6 +36,10 @@ class DataValidation
         if ($textFieldLenght < 2) {
             return TRUE;
         }
+        
+        else {
+            //Nothing to do
+        }
 
         return FALSE;
     }
@@ -70,6 +74,10 @@ class DataValidation
             $character = stripos($validChars, $name[$i]);
             if (!$character) {
                 $result = 1;
+            }
+            
+            else {
+            //Nothing to do
             }
         }
 
