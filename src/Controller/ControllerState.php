@@ -21,6 +21,9 @@ class ControllerState
         if (!isset(self::$instanceControllerState)) {
             self::$instanceControllerState = new ControllerState();
         }
+        else {
+            //Nothing to do
+        }
 
         return self::$instanceControllerState;
     }
