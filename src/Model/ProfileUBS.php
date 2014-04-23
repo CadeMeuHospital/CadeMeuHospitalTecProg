@@ -9,7 +9,7 @@ class ProfileUBS
     private $idUBS;
     private $latitudeUBS;
     private $longitudeUBS;
-    private $codCNES;
+    private $codeCNES;
     private $nameUBS;
     private $descEnder;
     private $phoneUBS;
@@ -21,14 +21,14 @@ class ProfileUBS
 
     private $city;
 
-    public function __construct($idUBS, $latitudeUBS, $longitudeUBS, $codCNES,
+    public function __construct($idUBS, $latitudeUBS, $longitudeUBS, $codeCNES,
             $nameUBS, $descEnder, $phoneUBS,$physicStructureUBS,
             $adapOldPeople, $descriTools, $descMedicine,
             $average, $city) {
         $this->setIdUBS($idUBS);
         $this->setLatitudeUBS($latitudeUBS);
         $this->setLongitudeUBS($longitudeUBS);
-        $this->setCodCNES($codCNES);
+        $this->setCodCNES($codeCNES);
         $this->setNameUBS($nameUBS);
         $this->setDescEnder($descEnder);
         $this->setPhoneUBS($phoneUBS);
@@ -83,12 +83,12 @@ class ProfileUBS
 
     public function getCodCNES()
     {
-        return $this->codCNES;
+        return $this->codeCNES;
     }
 
-    public function setCodCNES($codCNES)
+    public function setCodCNES($codeCNES)
     {
-        $this->codCNES = $codCNES;
+        $this->codeCNES = $codeCNES;
     }
 
     public function getNameUBS()
