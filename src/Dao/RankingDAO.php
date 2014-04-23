@@ -20,6 +20,10 @@ class RankingDAO
         if (!isset(self::$instanceRankingDAO)) {
             self::$instanceRankingDAO = new RankingDAO();
         }
+        
+        else {
+            //Nothing to do
+        }
 
         return self::$instanceRankingDAO;
     }
