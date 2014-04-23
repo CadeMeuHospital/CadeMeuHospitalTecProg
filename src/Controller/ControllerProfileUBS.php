@@ -76,7 +76,7 @@ class ControllerProfileUBS
         $longitudeUBS = mysql_result($attributeUBS, $index, "vlr_longitude");
         $codeCNES = mysql_result($attributeUBS, $index, "cod_cnes");
         $nameUBS = mysql_result($attributeUBS, $index, "nom_estab");
-        $dscEnder = mysql_result($attributeUBS, $index, "dsc_endereco");
+        $descriptionAdressUBS = mysql_result($attributeUBS, $index, "dsc_endereco");
         $phoneUBS = mysql_result($attributeUBS, $index, "dsc_telefone");
         $physicStructureUBS = mysql_result($attributeUBS, $index, "dsc_estrut_fisic_ambiencia");
         $adapOldPeople = mysql_result($attributeUBS, $index, "dsc_adap_defic_fisic_idosos");
@@ -93,7 +93,7 @@ class ControllerProfileUBS
         $cityUBS = $controllerCity->makeObjectCity($codeCounty, $stateUBS);
 
         $ubs = new ProfileUBS($idUBS, $latitudeUBS, $longitudeUBS, $codeCNES,
-                $nameUBS, $dscEnder, $phoneUBS, $physicStructureUBS,
+                $nameUBS, $descriptionAdressUBS, $phoneUBS, $physicStructureUBS,
                 $adapOldPeople, $descriTools, $descMedicine, $average, $cityUBS);
 
         return $ubs;
