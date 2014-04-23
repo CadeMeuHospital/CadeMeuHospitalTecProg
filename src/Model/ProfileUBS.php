@@ -14,7 +14,7 @@ class ProfileUBS
     private $descEnder;
     private $phoneUBS;
     private $physicStructureUBS;
-    private $adapOldPeople;
+    private $adaptabilityAgedPerson;
     private $descriTools;
     private $descMedicine;
     private $average;
@@ -23,7 +23,7 @@ class ProfileUBS
 
     public function __construct($idUBS, $latitudeUBS, $longitudeUBS, $codeCNES,
             $nameUBS, $descEnder, $phoneUBS,$physicStructureUBS,
-            $adapOldPeople, $descriTools, $descMedicine,
+            $adaptabilityAgedPerson, $descriTools, $descMedicine,
             $average, $city) {
         $this->setIdUBS($idUBS);
         $this->setLatitudeUBS($latitudeUBS);
@@ -33,7 +33,7 @@ class ProfileUBS
         $this->setDescEnder($descEnder);
         $this->setPhoneUBS($phoneUBS);
         $this->setPhysicStructureUBS($physicStructureUBS);
-        $this->setAdapOldPeople($adapOldPeople);
+        $this->setAdapOldPeople($adaptabilityAgedPerson);
         $this->setDescriTools($descriTools);
         $this->setDescMedicine($descMedicine);
         $this->setAverage($average);
@@ -133,12 +133,12 @@ class ProfileUBS
 
     public function getAdapOldPeople()
     {
-        return $this->adapOldPeople;
+        return $this->adaptabilityAgedPerson;
     }
 
-    public function setAdapOldPeople($adapOldPeople)
+    public function setAdapOldPeople($adaptabilityAgedPerson)
     {
-        $this->adapOldPeople = $adapOldPeople;
+        $this->adaptabilityAgedPerson = $adaptabilityAgedPerson;
     }
 
     public function getDescriTools()
