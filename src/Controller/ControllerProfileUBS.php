@@ -108,8 +108,8 @@ class ControllerProfileUBS
         $arrayUBS = array();
         try {
             $attributesUBS = $profileUBSDAO->searchUBSinDatabase($field, $searchType);
-            $lines = mysql_num_rows($attributesUBS);
-            while ($counter < $lines) {
+            $numberOfSearchLines = mysql_num_rows($attributesUBS);
+            while ($counter < $numberOfSearchLines) {
 
                 $UBS = self::$instanceControllerProfileUBS->makeObjectLoop($attributesUBS, $counter);
 
