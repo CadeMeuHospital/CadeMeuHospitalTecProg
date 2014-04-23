@@ -21,6 +21,10 @@ class ControllerUser
         if (!isset(self::$instanceControllerUser)) {
             self::$instanceControllerUser = new ControllerUser();
         }
+        
+        else {
+            //Nothing to do
+        }
 
         return self::$instanceControllerUser;
     }
@@ -47,6 +51,10 @@ class ControllerUser
         for ($i = 0; $i < $sizeVector; $i++) {
             if ($vector_address[$i]->type == "locality") {
                 return $vector_address[$i]->long_name;
+            }
+            
+            else {
+            //Nothing to do
             }
         }
 
