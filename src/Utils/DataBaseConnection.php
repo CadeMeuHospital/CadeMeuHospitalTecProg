@@ -15,12 +15,21 @@ if (!$db_connection) {
     <script> window.location='http://localhost/CadeMeuHospital/view/home.php'</script>";
     die;
 }
+
+else {
+            //Nothing to do
+        }
+        
 $db_selected = mysql_select_db("cademeuhospital");
 if (!$db_selected) {
     print"<script>alert('Falha na conexão ao banco de dados \"cademeuhospital\".')</script>
     <script>  window.location='http://localhost/CadeMeuHospital/view/home.php'</script>";
     die;
 }
+
+else {
+            //Nothing to do
+        }
 mysql_query("SET NAMES 'utf8'");
 mysql_query('SET character_set_connection=utf8');
 mysql_query('SET character_set_client=utf8');
