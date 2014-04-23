@@ -36,8 +36,8 @@ class ControllerProfileUBS
         $profileUBSDAO = ProfileUBSDAO::getInstanceProfileUBSDAO();
 
         $attributesUBS = $profileUBSDAO->returnUBS($idUBS);
-        $attributesUBS2 = $attributesUBS;
-        if (mysql_fetch_row($attributesUBS2) == NULL) {
+        $copyAttributesUBS = $attributesUBS;
+        if (mysql_fetch_row($copyAttributesUBS) == NULL) {
             return false;
         }
 
