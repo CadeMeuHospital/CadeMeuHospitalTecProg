@@ -80,7 +80,7 @@ class ControllerProfileUBS
         $phoneUBS = mysql_result($attributeUBS, $index, "dsc_telefone");
         $physicStructureUBS = mysql_result($attributeUBS, $index, "dsc_estrut_fisic_ambiencia");
         $adaptabilityAgedPerson = mysql_result($attributeUBS, $index, "dsc_adap_defic_fisic_idosos");
-        $descriTools = mysql_result($attributeUBS, $index, "dsc_equipamentos");
+        $descriptionTools = mysql_result($attributeUBS, $index, "dsc_equipamentos");
         $descMedicine = mysql_result($attributeUBS, $index, "dsc_medicamentos");
         $average = mysql_result($attributeUBS, $index, "average");
 
@@ -94,7 +94,7 @@ class ControllerProfileUBS
 
         $ubs = new ProfileUBS($idUBS, $latitudeUBS, $longitudeUBS, $codeCNES,
                 $nameUBS, $descriptionAdressUBS, $phoneUBS, $physicStructureUBS,
-                $adaptabilityAgedPerson, $descriTools, $descMedicine, $average, $cityUBS);
+                $adaptabilityAgedPerson, $descriptionTools, $descMedicine, $average, $cityUBS);
 
         return $ubs;
     }
