@@ -20,6 +20,10 @@ class DistanceLatLon
         if (($fromLat == $toLat) && ($fromLon == $toLon)) {
             return 0.0;
         }
+        
+        else {
+            //Nothing to do
+        }
 
         // Compute the distance with the haversine formula
         $distanceRad = acos(sin(deg2rad($fromLat)) * sin(deg2rad($toLat)) +
