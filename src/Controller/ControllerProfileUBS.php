@@ -26,6 +26,9 @@ class ControllerProfileUBS
         if (!isset(self::$instanceControllerProfileUBS)) {
             self::$instanceControllerProfileUBS = new ControllerProfileUBS();
         }
+        else {
+            //Nothing to do
+        }
 
         return self::$instanceControllerProfileUBS;
     }
@@ -39,6 +42,9 @@ class ControllerProfileUBS
         $copyAttributesUBS = $attributesUBS;
         if (mysql_fetch_row($copyAttributesUBS) == NULL) {
             return false;
+        }
+        else {
+            //Nothing to do
         }
 
         $profileUBS = self::$instanceControllerProfileUBS->makeObjectLoop($attributesUBS, 0);
@@ -54,6 +60,9 @@ class ControllerProfileUBS
         $ubs = self::$instanceControllerProfileUBS->returnUBS($idUBS);
         if (!$ubs) {
             return false;
+        }
+        else {
+            //Nothing to do
         }
         $stateAcronym = $ubs->getCity()->getState()->getAcronym();
         $resultEvaluation = $profileUBSDAO->saveEvaluationUBS($evaluate, $idUBS);
