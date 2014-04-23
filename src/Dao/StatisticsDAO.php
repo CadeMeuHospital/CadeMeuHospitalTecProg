@@ -16,6 +16,10 @@ class StatisticsDAO
         if (!isset(self::$instanceStatisticsDAO)) {
             self::$instanceStatisticsDAO = new StatisticsDAO();
         }
+        
+        else {
+            //Nothing to do
+        }
 
         return self::$instanceStatisticsDAO;
     }
