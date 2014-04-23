@@ -20,6 +20,10 @@ class ControllerStatistics
         if (!isset(self::$instanceControllerStatistics)) {
             self::$instanceControllerStatistics = new ControllerStatistics();
         }
+        
+        else {
+            //Nothing to do
+        }
 
         return self::$instanceControllerStatistics;
     }
