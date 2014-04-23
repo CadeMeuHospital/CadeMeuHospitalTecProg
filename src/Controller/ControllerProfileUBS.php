@@ -117,8 +117,8 @@ class ControllerProfileUBS
 
                 $counter++;
             }
-        } catch (TextFieldException $e) {
-            print "<script>alert('" . $e->getMessage() . "')</script>";
+        } catch (TextFieldException $exception) {
+            print "<script>alert('" . $exception->getMessage() . "')</script>";
             print "<script>window.location='../View/Home.php'</script>";
         }
 

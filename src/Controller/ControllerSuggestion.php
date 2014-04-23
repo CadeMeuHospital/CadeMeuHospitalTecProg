@@ -32,11 +32,11 @@ class ControllerSuggestion
             $result = $suggestionDAO->saveSuggestionInDatabase($suggestion, $email);
 
             return $result;
-        } catch (TextFieldException $e) {
-            print "<script>alert('".$e->getMessage()."')</script>";
+        } catch (TextFieldException $exception) {
+            print "<script>alert('".$exception->getMessage()."')</script>";
             print "<script>window.location='../View/Contact.php'</script>";
-        } catch (EmailException $e) {
-            print "<script>alert('".$e->getMessage()."')</script>";
+        } catch (EmailException $exception) {
+            print "<script>alert('".$exception->getMessage()."')</script>";
             print "<script>window.location='../View/Contact.php'</script>";
         }
     }
