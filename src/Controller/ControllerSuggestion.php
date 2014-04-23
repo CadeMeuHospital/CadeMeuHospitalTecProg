@@ -20,6 +20,10 @@ class ControllerSuggestion
         if (!isset(self::$instanceControllerSuggestion)) {
             self::$instanceControllerSuggestion = new ControllerSuggestion();
         }
+        
+        else {
+            //Nothing to do
+        }
 
         return self::$instanceControllerSuggestion;
     }
