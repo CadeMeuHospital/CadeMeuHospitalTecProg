@@ -28,9 +28,9 @@ class ControllerRanking
     public function makeRank()
     {
         $rankingDAO = RankingDAO::getInstanceRankingDAO();
-        $rank = $rankingDAO->getRank();
+        $rankingWithHigherScores = $rankingDAO->getRank();
 
-        return $rank;
+        return $rankingWithHigherScores;
     }
 
     //Creating a different image based on the UBS's average grade
